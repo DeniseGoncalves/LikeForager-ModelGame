@@ -73,11 +73,12 @@ public class PlayerController : MonoBehaviour
 
     public void AxeHit()
     {
-        
+        CoreGame._instance.gameManager.ObjectHit();
     }
 
     private void ActionDone()
     {
+        
         isAction = false; //Quando a ação terminar, permite que o personagem se mova novamente
     }
 }

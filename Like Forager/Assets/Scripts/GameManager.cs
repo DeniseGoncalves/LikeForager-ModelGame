@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public float interacionDistance;
     
     public GameObject actionCursor;
     public GameObject interacionObject;
@@ -23,7 +24,11 @@ public class GameManager : MonoBehaviour
 
     public void ObjectHit()
     {
-        
+        if(interacionObject == null)
+        {
+            return; //Se não houver objeto de interação, não faz nada
+        }
+        interacionObject.SendMessage("OnHit", SendMessageOptions.DontRequireReceiver);
     }
 
 }
