@@ -3364,7 +3364,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 872966011, guid: 2cef7db90623ddf49b3794a8d17318e7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3452,7 +3452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33b3ee57dcb59eb4ea59933b4863a031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interacionDistance: 1.2
+  interacionDistance: 1.5
   actionCursor: {fileID: 1429562624}
   interacionObject: {fileID: 0}
 --- !u!114 &1531297658
@@ -3467,6 +3467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba13b0d650e0f3147bd2214a0f8aaab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 1989734519}
   gameManager: {fileID: 1531297657}
 --- !u!4 &1531297659
 Transform:

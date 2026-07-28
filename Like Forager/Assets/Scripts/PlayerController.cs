@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
 
     private bool isLookLeft = true;
     private bool isWalk;
+
+    private bool isActionButton;
     private bool isAction;
 
     public float movementSpeed;
@@ -38,6 +40,16 @@ public class PlayerController : MonoBehaviour
         }
 
         if(Input.GetButtonDown("Fire1") && isAction == false) 
+        {
+            isActionButton = true;
+        }
+
+        if(Input.GetButtonUp("Fire1"))
+        {
+            isActionButton = false;
+        }
+
+        if(isActionButton == true && isAction == false)
         {
             isAction = true;
             m_Animator.SetTrigger("Axe");
