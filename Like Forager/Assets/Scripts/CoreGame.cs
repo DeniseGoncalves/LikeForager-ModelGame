@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ItemType
+{
+    WOOD, COAL, IRON, STONE, FRUIT
+}
 public class CoreGame : MonoBehaviour
 {
     public static CoreGame _instance;

@@ -16,8 +16,8 @@ public class GameManager : MonoBehaviour
 
         if(Vector2.Distance(CoreGame._instance.playerController.transform.position, interacionObject.transform.position) <= interacionDistance) //
         { 
-        actionCursor.transform.position = obj.transform.position;
-        actionCursor.SetActive(true);
+            actionCursor.transform.position = obj.transform.position;
+            actionCursor.SetActive(true);
         }
     }
 
@@ -53,6 +53,16 @@ public class GameManager : MonoBehaviour
                 actionCursor.SetActive(false);
             }
         }
+    }
+
+    public void Loot(Item item, Vector3 position)
+    {
+        DisableCursor();
+
+        GameObject l = null;
+        int dir = -1;
+
+        //for(int i ==)
     }
 
 }

@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7006862081de14295287dfe8dad641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitAmount: 3
+  item: {fileID: 0}
 --- !u!212 &354319392
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -373,7 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7006862081de14295287dfe8dad641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitAmount: 3
+  item: {fileID: 0}
 --- !u!212 &496926369
 SpriteRenderer:
   m_ObjectHideFlags: 0

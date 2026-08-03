@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class Mine : MonoBehaviour
 {
-    public int hitAmount;
+    public Item item;
+    private int hitAmount;
+
+    private void Start()
+    {
+        hitAmount = item.hitAmount;
+    }
+
     private void OnMouseOver()
     {
         CoreGame._instance.gameManager.ActiveCursor(this.gameObject);
@@ -20,7 +27,7 @@ public class Mine : MonoBehaviour
         hitAmount --; //Diminui a quantidade de hits restantes
         if(hitAmount <= 0)
         {
-            CoreGame._instance.gameManager.DisableCursor();
+            CoreGame._instance.gameManager.Loot(item, transform.position);
             Destroy(this.gameObject);
         }
         
