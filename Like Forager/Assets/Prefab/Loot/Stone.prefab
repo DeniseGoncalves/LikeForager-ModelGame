@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3761678524581921220}
   - component: {fileID: 5033985894465102821}
   - component: {fileID: 7358800986157923940}
+  - component: {fileID: 813525359533888781}
   m_Layer: 0
   m_Name: Stone
   m_TagString: loot
@@ -158,3 +159,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.24471426, y: 0.30840153}
   m_EdgeRadius: 0
+--- !u!114 &813525359533888781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4101323103664373484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2762114592dda954ca644c7c20d365a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 108166d58e4e031499b24ced035ee119, type: 2}
+  col: {fileID: 7358800986157923940}

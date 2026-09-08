@@ -17,5 +17,5 @@ MonoBehaviour:
   itemName: Pedra
   itemSprite: {fileID: -105573704, guid: cb83df54d233a324f97da194e40d0cb4, type: 3}
   itemDescription: Lasca de Pedra
-  itemPrefab: {fileID: 4101323103664373484, guid: 2e6fdb5cde7c74a49ba7f627a0cc1712, type: 3}
-  lootAmount: 0
+  lootPrefab: {fileID: 4101323103664373484, guid: 2e6fdb5cde7c74a49ba7f627a0cc1712, type: 3}
+  lootAmount: 2

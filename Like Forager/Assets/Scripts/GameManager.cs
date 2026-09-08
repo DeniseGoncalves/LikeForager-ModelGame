@@ -59,10 +59,16 @@ public class GameManager : MonoBehaviour
     {
         DisableCursor();
 
-        GameObject l = null;
         int dir = -1;
 
-        //for(int i ==)
+        for(int i = 0; i < item.lootAmount; i ++)
+        {
+            GameObject loot = Instantiate(item.lootPrefab, position, transform.localRotation);
+
+            loot.SendMessage("Active", dir, SendMessageOptions.DontRequireReceiver);
+
+            dir *= -1; // Alterna a direção para espalhar os itens de loot
+        }
     }
 
 }

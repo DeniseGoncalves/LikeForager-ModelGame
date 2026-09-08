@@ -9,6 +9,6 @@ public class Item : ScriptableObject
     public Sprite itemSprite;
     [TextArea(1,4)]
     public string itemDescription;
-    public GameObject itemPrefab;
+    public GameObject lootPrefab;
     public int lootAmount;
 }
