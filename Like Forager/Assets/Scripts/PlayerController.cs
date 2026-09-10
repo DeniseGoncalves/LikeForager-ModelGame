@@ -93,4 +93,16 @@ public class PlayerController : MonoBehaviour
         
         isAction = false; //Quando a ação terminar, permite que o personagem se mova novamente
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        switch(collision.gameObject.tag)
+        {
+            case "loot":
+                Item item = collision.gameObject.GetComponent<Loot>().item;
+                CoreGame._instance.inventory.GetItem(item, 1); //Adiciona o item ao inventário
+                Destroy(collision.gameObject); //Destroi o objeto coletado
+                break;
+        }
+    }
 }
