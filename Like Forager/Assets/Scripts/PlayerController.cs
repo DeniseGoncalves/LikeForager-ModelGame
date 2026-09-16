@@ -49,6 +49,11 @@ public class PlayerController : MonoBehaviour
             isActionButton = false;
         }
 
+        if(Input.GetButtonDown("Cancel"))
+        {
+            CoreGame._instance.inventory.ShowInventory(); //Se o jogador apertar a tecla "Cancel" (Esc), chama a função ShowInventory do script Inventory
+        }
+
         if(isActionButton == true && isAction == false)
         {
             isAction = true;
