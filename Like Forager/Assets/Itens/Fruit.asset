@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0ca8f74147136499bbb4a28fe8bf3f, type: 3}
+  m_Name: Fruit
+  m_EditorClassIdentifier: 
+  itemType: 4
+  itemUse: 1
+  hitAmount: 3
+  itemName: Frutinha
+  itemSprite: {fileID: -30103205, guid: cb83df54d233a324f97da194e40d0cb4, type: 3}
+  itemDescription: "Uma pequena fruta de sabor c\xEDtrico."
+  itemUseTxt: Recupera 5 de Energia
+  lootPrefab: {fileID: 4101323103664373484, guid: 0806a676c68d3154cb9fa05b975308e2, type: 3}
+  lootAmount: 2

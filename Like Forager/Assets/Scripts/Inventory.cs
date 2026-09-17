@@ -14,7 +14,13 @@ public class Inventory : MonoBehaviour
 
     private List<GameObject> inventorySlots = new List<GameObject>();
 
-    //public Dictionary<Item, GameObject> inventorySlots = new Dictionary<Item, GameObject>();
+    [Header("Item Info")]
+    public GameObject itemInfoWindow;
+    public Image itemImage;
+    public Text itemName;
+    public Text itemType;
+    public Text itemUse;
+    public Text itemDescription;
 
     public void GetItem(Item item, int amount)
     {
@@ -31,6 +37,8 @@ public class Inventory : MonoBehaviour
 
     public void ShowInventory()
     {
+        DisableItemInfoWindow();
+
         bool isActive = !inventoryPanel.activeSelf; // Verifica se o painel de inventário está ativo
         inventoryPanel.SetActive(isActive);
 
@@ -56,4 +64,21 @@ public class Inventory : MonoBehaviour
             i.GetComponent<InventorySlot>().UpdateSlot(item.Key, item.Value);
         }
     }
+
+    public void ShowItemInfo(Item item)
+    {
+        itemImage.sprite = item.itemSprite;
+        itemName.text = item.itemName;
+        itemType.text = item.itemUse.ToString();
+        itemUse.text = item.itemUseTxt;
+        itemDescription.text = item.itemDescription;
+
+        itemInfoWindow.SetActive(true);
+    }
+
+    public void DisableItemInfoWindow()
+    {
+        itemInfoWindow.SetActive(false);
+    }
+
 }

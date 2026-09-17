@@ -6,6 +6,12 @@ public enum ItemType
 {
     WOOD, COAL, IRON, STONE, FRUIT
 }
+
+public enum ItemUse
+{
+    MATERIAL, CONSUMABLE
+}
+
 public class CoreGame : MonoBehaviour
 {
     public static CoreGame _instance;
