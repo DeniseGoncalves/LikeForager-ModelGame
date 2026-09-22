@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public GameObject interacionObject;
 
+    public float timeToDelete = 3f;
+
     public void ActiveCursor(GameObject obj)
     {
         interacionObject = obj;

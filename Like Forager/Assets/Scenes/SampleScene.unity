@@ -4795,6 +4795,7 @@ MonoBehaviour:
   interacionDistance: 1.5
   actionCursor: {fileID: 1429562624}
   interacionObject: {fileID: 0}
+  timeToDelete: 3
 --- !u!114 &1531297658
 MonoBehaviour:
   m_ObjectHideFlags: 0

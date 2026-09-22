@@ -48,6 +48,13 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void DeleteItem(Item item)
+    {
+        inventory.Remove(item);
+        UpdateInventory();
+        DisableItemInfoWindow();
+    }
+
     void UpdateInventory()
     {
         foreach(GameObject s in inventorySlots)
