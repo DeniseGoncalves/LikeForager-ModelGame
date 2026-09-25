@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
 
     public float timeToDelete = 3f;
 
+    public int playerEnergyMax = 5;
+    public int playerEnergy = 5;
+
     public void ActiveCursor(GameObject obj)
     {
         interacionObject = obj;

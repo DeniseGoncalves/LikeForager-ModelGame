@@ -35,6 +35,37 @@ public class Inventory : MonoBehaviour
 
     }
 
+    public void DeleteItem(Item item)
+    {
+        inventory.Remove(item);
+        UpdateInventory();
+        DisableItemInfoWindow();
+    }
+
+    public void UseItem(Item item)
+    {
+        if(inventory.ContainsKey(item))
+        {
+            switch(item.itemType) // Apenas para itens consumíveis
+            {
+                case ItemType.FRUIT:
+
+                    break;
+            }
+            inventory[item] -= 1;
+
+            if(inventory[item] <= 0)
+            {
+                DeleteItem(item);
+            }
+            else
+            {
+                UpdateInventory();
+            }
+        }
+        
+    }
+
     public void ShowInventory()
     {
         DisableItemInfoWindow();
@@ -46,13 +77,6 @@ public class Inventory : MonoBehaviour
         {
             UpdateInventory(); 
         }
-    }
-
-    public void DeleteItem(Item item)
-    {
-        inventory.Remove(item);
-        UpdateInventory();
-        DisableItemInfoWindow();
     }
 
     void UpdateInventory()
@@ -87,5 +111,15 @@ public class Inventory : MonoBehaviour
     {
         itemInfoWindow.SetActive(false);
     }
+
+    /*private void ItemEffect(Item item)
+    {
+        switch(item.itemType)
+        {
+            case ItemType.FRUIT:
+                // efeito quando usar item
+                break;
+        }
+    }*/
 
 }

@@ -46,14 +46,14 @@ public class InventorySlot : MonoBehaviour
 
         if(pointerData.button == PointerEventData.InputButton.Left)
         {
-            //Botão esquerdo do mouse
-            print("Esquerdo");
+            if(item.itemUse == ItemUse.CONSUMABLE)
+            {
+                CoreGame._instance.inventory.UseItem(item);
+            }
         }
 
         if(pointerData.button == PointerEventData.InputButton.Right)
         {
-            //Botão direito do mouse
-            print("Direito");
             isDelete = true;
             deltatime = 0f;
             deleteBar.fillAmount = 0.1f;
