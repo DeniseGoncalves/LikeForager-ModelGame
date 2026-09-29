@@ -21,3 +21,5 @@ MonoBehaviour:
   itemUseTxt: Recupera 5 de Energia
   lootPrefab: {fileID: 4101323103664373484, guid: 0806a676c68d3154cb9fa05b975308e2, type: 3}
   lootAmount: 2
+  EnergyAmount: 3
+  ManaAmount: 0

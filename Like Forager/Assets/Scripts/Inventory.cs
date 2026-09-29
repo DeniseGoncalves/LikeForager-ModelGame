@@ -49,21 +49,30 @@ public class Inventory : MonoBehaviour
             switch(item.itemType) // Apenas para itens consumíveis
             {
                 case ItemType.FRUIT:
-
+                    if(CoreGame._instance.gameManager.IsNeedEnergy() == true)
+                    {
+                        UpdateItemInventory(item);
+                        CoreGame._instance.gameManager.SetPlayerEnergy(item.EnergyAmount);
+                    }
                     break;
             }
-            inventory[item] -= 1;
 
-            if(inventory[item] <= 0)
-            {
-                DeleteItem(item);
-            }
-            else
-            {
-                UpdateInventory();
-            }
+            
         }
         
+    }
+
+    private void UpdateItemInventory(Item item)
+    {
+        inventory[item] -= 1;
+        if(inventory[item] <= 0)
+        {
+            DeleteItem(item);
+        }
+        else
+        {
+            UpdateInventory();
+        }
     }
 
     public void ShowInventory()

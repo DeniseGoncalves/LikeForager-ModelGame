@@ -76,4 +76,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public bool IsNeedEnergy()
+    {
+        bool retorno = playerEnergy < playerEnergyMax;
+        return retorno;
+    }
+
+    public void SetPlayerEnergy(int amount)
+    {
+        playerEnergy += amount;
+        if(playerEnergy > playerEnergyMax)
+        {
+            playerEnergy = playerEnergyMax;
+        }
+    }
+
 }

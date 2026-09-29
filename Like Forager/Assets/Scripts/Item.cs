@@ -13,4 +13,7 @@ public class Item : ScriptableObject
     public string itemUseTxt;
     public GameObject lootPrefab;
     public int lootAmount;
+
+    public int EnergyAmount;
+    public int ManaAmount;
 }
