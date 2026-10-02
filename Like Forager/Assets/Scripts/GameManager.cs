@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+
+    public GameState gameState;
+
     public float interacionDistance;
     
     public GameObject actionCursor;
@@ -17,6 +20,12 @@ public class GameManager : MonoBehaviour
 
     public void ActiveCursor(GameObject obj)
     {
+
+        if(gameState != GameState.GAMEPLAY)
+        {
+            return; //Se o estado do jogo não for GAMEPLAY, não ativa o cursor de interação
+        }
+
         interacionObject = obj;
 
         if(Vector2.Distance(CoreGame._instance.playerController.transform.position, interacionObject.transform.position) <= interacionDistance) //
@@ -88,6 +97,19 @@ public class GameManager : MonoBehaviour
         if(playerEnergy > playerEnergyMax)
         {
             playerEnergy = playerEnergyMax;
+        }
+    }
+
+    public void GameChangeState(GameState newState)
+    {
+        gameState = newState;
+
+        switch(gameState)
+        {
+            case GameState.INVENTORY:
+                interacionObject = null;
+                actionCursor.SetActive(false);
+                break;
         }
     }
 

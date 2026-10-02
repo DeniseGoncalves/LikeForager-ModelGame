@@ -28,6 +28,16 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetButtonDown("Cancel"))
+        {
+            CoreGame._instance.inventory.ShowInventory(); //Se o jogador apertar a tecla "Cancel" (Esc), chama a função ShowInventory do script Inventory
+        }
+
+        if(CoreGame._instance.gameManager.gameState != GameState.GAMEPLAY)
+        {
+            return; //Se o estado do jogo não for GAMEPLAY, não permite que o personagem se mova
+        }
+        
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); //Pega a posição do mouse na tela e converte para o mundo do jogo
         if(mousePosition.x < transform.position.x && isLookLeft == false)
         {
@@ -47,11 +57,6 @@ public class PlayerController : MonoBehaviour
         if(Input.GetButtonUp("Fire1"))
         {
             isActionButton = false;
-        }
-
-        if(Input.GetButtonDown("Cancel"))
-        {
-            CoreGame._instance.inventory.ShowInventory(); //Se o jogador apertar a tecla "Cancel" (Esc), chama a função ShowInventory do script Inventory
         }
 
         if(isActionButton == true && isAction == false)

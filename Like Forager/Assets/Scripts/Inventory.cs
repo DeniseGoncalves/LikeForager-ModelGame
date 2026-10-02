@@ -84,8 +84,14 @@ public class Inventory : MonoBehaviour
 
         if(isActive == true)
         {
+            CoreGame._instance.gameManager.GameChangeState(GameState.INVENTORY);
             UpdateInventory(); 
         }
+        else
+        {
+            CoreGame._instance.gameManager.GameChangeState(GameState.GAMEPLAY);
+        }
+        
     }
 
     void UpdateInventory()
