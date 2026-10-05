@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b0ca8f74147136499bbb4a28fe8bf3f, type: 3}
-  m_Name: Fruit
+  m_Name: Acid Fruit
   m_EditorClassIdentifier: 
   itemType: 4
   itemUse: 1
   hitAmount: 3
-  itemName: Frutinha
+  itemName: "Fruta \xC1cida"
   itemSprite: {fileID: -30103205, guid: cb83df54d233a324f97da194e40d0cb4, type: 3}
-  itemDescription: Uma pequena fruta de sabor adocicado.
-  lootPrefab: {fileID: 4101323103664373484, guid: 0806a676c68d3154cb9fa05b975308e2, type: 3}
+  itemDescription: "Uma pequena fruta de sabor c\xEDtrico."
+  lootPrefab: {fileID: 4101323103664373484, guid: 7977773b415b0764aba9be81f850132a, type: 3}
   lootAmount: 2
   isRecoverEnergy: 1
-  EnergyAmount: 3
+  EnergyAmount: 5
   isRecoverMana: 0
   ManaAmount: 0
-  isRecoverHP: 0
-  HPAmount: 0
+  isRecoverHP: 1
+  HPAmount: 1

@@ -46,10 +46,10 @@ public class Inventory : MonoBehaviour
     {
         if(inventory.ContainsKey(item))
         {
-            switch(item.itemType) // Apenas para itens consumíveis
+            switch(item.itemUse) // Apenas para itens consumíveis
             {
-                case ItemType.FRUIT:
-                    if(CoreGame._instance.gameManager.IsNeedEnergy() == true)
+                case ItemUse.CONSUMABLE:
+                    if(CoreGame._instance.gameManager.IsNeedEnergy() == true && item.isRecoverEnergy == true)
                     {
                         UpdateItemInventory(item);
                         CoreGame._instance.gameManager.SetPlayerEnergy(item.EnergyAmount);
@@ -115,10 +115,35 @@ public class Inventory : MonoBehaviour
     {
         itemImage.sprite = item.itemSprite;
         itemName.text = item.itemName;
-        itemType.text = item.itemUse.ToString();
-        itemUse.text = item.itemUseTxt;
         itemDescription.text = item.itemDescription;
+        itemUse.text = "";
+        string itemCategory = "";
+        switch(item.itemUse)
+        {
+            case ItemUse.MATERIAL:
+                itemCategory = "Material";
+                break;
 
+            case ItemUse.CONSUMABLE:
+                itemCategory = "Consumível";
+                break;
+        }
+        itemType.text = itemCategory;
+
+        if(item.isRecoverEnergy == true)
+        {
+            itemUse.text = "Recupera " + item.EnergyAmount.ToString() + " de Energia";
+        }
+        if(item.isRecoverMana == true)
+        {
+            itemUse.text += "Recupera " + item.ManaAmount.ToString() + " de Mana";
+        }
+        if(item.isRecoverHP == true)
+        {
+            itemUse.text += "Recupera " + item.HPAmount.ToString() + " de Vida";
+        }
+
+        
         itemInfoWindow.SetActive(true);
     }
 
