@@ -22,7 +22,7 @@ MonoBehaviour:
   lootAmount: 2
   isRecoverEnergy: 1
   EnergyAmount: 5
-  isRecoverMana: 0
+  isRecoverMana: 1
   ManaAmount: 0
   isRecoverHP: 1
   HPAmount: 1

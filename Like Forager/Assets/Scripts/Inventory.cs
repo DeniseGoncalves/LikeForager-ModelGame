@@ -132,15 +132,15 @@ public class Inventory : MonoBehaviour
 
         if(item.isRecoverEnergy == true)
         {
-            itemUse.text = "Recupera " + item.EnergyAmount.ToString() + " de Energia";
+            itemUse.text = "Recupera <color=#FFFF00>" + item.EnergyAmount.ToString() + "</color> de Energia";
         }
         if(item.isRecoverMana == true)
         {
-            itemUse.text += "Recupera " + item.ManaAmount.ToString() + " de Mana";
+            itemUse.text += "\nRecupera <color=#FFFF00>" + item.ManaAmount.ToString() + "</color> de Mana";
         }
         if(item.isRecoverHP == true)
         {
-            itemUse.text += "Recupera " + item.HPAmount.ToString() + " de Vida";
+            itemUse.text += "\nRecupera <color=#FFFF00>" + item.HPAmount.ToString() + "</color> de Vida";
         }
 
         
