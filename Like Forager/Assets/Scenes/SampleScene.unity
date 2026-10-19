@@ -7913,6 +7913,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1206966841}
   - component: {fileID: 1206966840}
+  - component: {fileID: 1206966842}
   m_Layer: 0
   m_Name: Main Island
   m_TagString: Untagged
@@ -7948,6 +7949,26 @@ Transform:
   - {fileID: 725545603}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1206966842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206966839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3d750a8f78c8aa4294c0306487ea6df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceLV1:
+  - resource: {fileID: 8459899601252154913, guid: 54b0f637602694647b29fb1228545d2a, type: 3}
+    amount: 5
+  - resource: {fileID: 5781248950300744823, guid: a539e2254eff3704d8732d24c133d9a5, type: 3}
+    amount: 2
+  - resource: {fileID: 3731224154482951456, guid: ea4dae6e82356a74b9a34d824ae63894, type: 3}
+    amount: 1
+  resourceIsland: []
 --- !u!1001 &1212239394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12223,10 +12244,10 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1531297659}
   - {fileID: 1429562627}
-  - {fileID: 1206966841}
   - {fileID: 2059915167}
   - {fileID: 73797515}
   - {fileID: 1989734518}
   - {fileID: 1711557392}
   - {fileID: 619394802}
   - {fileID: 695582990}
+  - {fileID: 1206966841}
