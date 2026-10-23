@@ -8,7 +8,7 @@ public class IslandPrefabDataBase : MonoBehaviour
     public List<GameObject> resourceIsland = new List<GameObject>();
 
    
-    public void CreatIslandResource()
+    public void CreateIslandResource()
     {
         resourceIsland.Clear();
 
