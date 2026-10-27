@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private bool isAction;
 
     public float movementSpeed;
+    public float positionY;
 
     // Start is called before the first frame update
     void Start()
@@ -80,6 +81,11 @@ public class PlayerController : MonoBehaviour
 
         m_Animator.SetBool("isWalk", isWalk);    
         
+    }
+
+    private void LateUpdate()
+    {
+        positionY = transform.position.y;
     }
 
     private void Flip()
