@@ -8858,8 +8858,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1101490397
+  m_SortingLayer: -1
   m_SortingOrder: 1
   m_Sprite: {fileID: 872966011, guid: 2cef7db90623ddf49b3794a8d17318e7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -9291,6 +9291,8 @@ MonoBehaviour:
   timeToDelete: 3
   playerEnergyMax: 5
   playerEnergy: 3
+  distanceToSpawnResource: 2
+  timeToSpawnResource: 5
 --- !u!114 &1531297658
 MonoBehaviour:
   m_ObjectHideFlags: 0

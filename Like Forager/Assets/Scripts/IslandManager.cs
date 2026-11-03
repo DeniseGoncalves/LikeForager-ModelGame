@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class IslandManager : MonoBehaviour //este script é responsável por gerenciar os recursos da ilha, spawnando novos recursos e controlando a quantidade máxima de recursos
 {
@@ -24,6 +25,8 @@ public class IslandManager : MonoBehaviour //este script é responsável por ger
                 NewResources();
             }
         }
+
+        StartCoroutine(SpawnResource());
     }
 
     void NewResources()
@@ -33,16 +36,38 @@ public class IslandManager : MonoBehaviour //este script é responsável por ger
 
         if(s.isBusy == false)
         {
-            int idResource = Random.Range(0, dataBase.resourceIsland.Count);
-            GameObject resource = Instantiate(dataBase.resourceIsland[idResource]);
-            resource.GetComponent<Mine>().SetSlot(s);
-            s.Busy(true);
+            if(CoreGame._instance.gameManager.DistancePlayer(s.transform.position) == true)
+            {
+                int idResource = Random.Range(0, dataBase.resourceIsland.Count);
+                GameObject resource = Instantiate(dataBase.resourceIsland[idResource]);
+                resource.GetComponent<Mine>().SetSlot(s);
+                s.Busy(true);
+            }
+            else
+            {
+                NewResources();
+            }
+            
         }
         else if (s.isBusy == true)
         {
             NewResources();
         }
 
+    }
+
+    IEnumerator SpawnResource()
+    {
+        while(true)
+        {
+            yield return new WaitForSeconds(CoreGame._instance.gameManager.timeToSpawnResource);
+
+            int count = slot.Where(x => x.isBusy == true).Count();
+            if(count < maxResources)
+            {
+                NewResources();
+            }
+        }
     }
 
     

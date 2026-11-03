@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour
     public int playerEnergyMax = 5;
     public int playerEnergy = 5;
 
+    public float distanceToSpawnResource;
+    public float timeToSpawnResource;
+
     public void ActiveCursor(GameObject obj)
     {
 
@@ -119,6 +122,13 @@ public class GameManager : MonoBehaviour
                 actionCursor.SetActive(false);
                 break;
         }
+    }
+
+    public bool DistancePlayer(Vector3 position)
+    {
+        float distance = Vector3.Distance(CoreGame._instance.playerController.transform.position, position);
+        bool isReady = distance >= distanceToSpawnResource;
+        return isReady;
     }
 
 }
