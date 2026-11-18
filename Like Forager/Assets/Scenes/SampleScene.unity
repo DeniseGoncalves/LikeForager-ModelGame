@@ -7964,11 +7964,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceLV1:
   - resource: {fileID: 8459899601252154913, guid: 54b0f637602694647b29fb1228545d2a, type: 3}
-    amount: 5
+    amount: 1
+  resourceLV2:
   - resource: {fileID: 5781248950300744823, guid: a539e2254eff3704d8732d24c133d9a5, type: 3}
-    amount: 2
+    amount: 1
+  resourceLV3:
   - resource: {fileID: 3731224154482951456, guid: ea4dae6e82356a74b9a34d824ae63894, type: 3}
     amount: 1
+  resourceLV4:
+  - resource: {fileID: 2260895372502213707, guid: 01be9b2272f305b4ca575153c7d24a54, type: 3}
+    amount: 1
+  resourceLV5:
+  - resource: {fileID: 8499258639649497371, guid: 918fb72a553c6224f817ea5a2f106288, type: 3}
+    amount: 1
+  LevelToUpgrade: 010000000300000005000000070000000a000000
   resourceIsland: []
 --- !u!114 &1206966843
 MonoBehaviour:
@@ -9289,6 +9298,7 @@ MonoBehaviour:
   actionCursor: {fileID: 1429562624}
   interacionObject: {fileID: 0}
   timeToDelete: 3
+  playerLevel: 10
   playerEnergyMax: 5
   playerEnergy: 3
   distanceToSpawnResource: 2

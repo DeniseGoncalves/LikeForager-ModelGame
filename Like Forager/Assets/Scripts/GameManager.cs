@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     public float timeToDelete = 3f;
 
+    public int playerLevel;
     public int playerEnergyMax = 5;
     public int playerEnergy = 5;
 

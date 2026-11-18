@@ -5,6 +5,13 @@ using UnityEngine;
 public class IslandPrefabDataBase : MonoBehaviour
 {
     public ResourceLoot[]  resourceLV1;
+    public ResourceLoot[]  resourceLV2;
+    public ResourceLoot[]  resourceLV3;
+    public ResourceLoot[]  resourceLV4;
+    public ResourceLoot[]  resourceLV5;
+
+    public int[] LevelToUpgrade;
+
     public List<GameObject> resourceIsland = new List<GameObject>();
 
    
@@ -12,17 +19,48 @@ public class IslandPrefabDataBase : MonoBehaviour
     {
         resourceIsland.Clear();
 
-        if(resourceLV1.Length == 0) { return;} //Se não houver recursos no array, não faz nada
-
-        foreach(ResourceLoot l in resourceLV1)
+        for(int i = 0; i < LevelToUpgrade.Length; i++)
         {
-            for(int i = 0; i < l.amount; i ++)
+           if(CoreGame._instance.gameManager.playerLevel >= LevelToUpgrade[i])
             {
-                resourceIsland.Add(l.resource);
-            }
-        }
+                switch(i)
+                {
+                    case 0:
+                        ResourceLevel(resourceLV1);
+                        break;
+                    
+                    case 1:
+                        ResourceLevel(resourceLV2);
+                        break;
+                    
+                    case 2:
+                        ResourceLevel(resourceLV3);
+                        break;
+                        
+                    case 3:
+                        ResourceLevel(resourceLV4);
+                        break;
 
+                    case 4:
+                        ResourceLevel(resourceLV5);
+                        break;
+                }
+            }  
+        }
     }
 
+    private void ResourceLevel(ResourceLoot[] res)
+    {
+        if(res.Length > 0)
+            {
+                foreach(ResourceLoot l in res)
+                {
+                    for(int i = 0; i < l.amount; i ++)
+                    {
+                        resourceIsland.Add(l.resource);
+                    }
+                }
+            }
+    }
     
 }
